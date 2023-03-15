@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/reboot.css">
+    <script src="assets/js/app.js"></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>
+                <div>
+                    <span class="word">Password</span>
+                </div>
+                <div>
+                    <span class="word">Generator</span>
+                </div>
+            </h1>
+            <div id="screen">
+                <input type="text" name="displayScreen" id="displayScreen">
+                <button id="clipBtn">
+                    <img src="assets/images/copy.png" alt="copy-icons">
+                </button>
+            </div>
+            <div class="alertDisplay">
+                <p></p>
+            </div>
+            <div class="parameters">
+                <div class="length">
+                    <label for="passLength">Password length</label>
+                    <input type="range" name="passLength" id="passLength" min="8" max="30">
+                    <input type="text" name="displayLength" id="displayLength">
+                </div>
+                <div class="paramsCheckBox">
+                    <div>
+                        <input type="checkbox" name="lowerCase" id="lowerCase">
+                        <label for="lowerCase">Lowercase Letter</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="upperCase" id="upperCase">
+                        <label for="upperCase">Uppercase Letter</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="number" id="number">
+                        <label for="number">Number</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="specialChars" id="specialChars">
+                        <label for="specialChars">Special Characters</label>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="generateBtn">Generate</a>
+        </div>
+    </main>
+</body>
+</html>

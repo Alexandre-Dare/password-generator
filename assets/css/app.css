@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+body {
+  background-color: #333333;
+  font-family: Rubik, sans-serif;
+}
+
+.container {
+  border: 5px solid #00f7d2;
+  box-shadow: 0 0 10px 10px #00f7d22a;
+  border-radius: 5%;
+  width: 40%;
+  min-width: 20rem;
+  margin: 20vh auto;
+  text-align: center;
+  padding: 2rem 0;
+  color: white;
+}
+
+#screen {
+  display: flex;
+  height: 2rem;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+#screen input {
+  width: 90%;
+}
+
+#clipBtn img {
+  width: 100%;
+  height: 100%;
+}
+
+.parameters {
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.length {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#displayLength {
+  width: 10%;
+  margin-left: 5%;
+}
+
+.length input {
+  width: 80%;
+}
+
+.paramsCheckBox {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+}
+
+.paramsCheckBox div {
+  width: 50%;
+  text-align: start;
+}
+
+.alertDisplay {
+  width: 80%;
+  margin: 0 auto;
+  border: 0.5px solid grey;
+  font-weight: bold;
+  border-radius: 4px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.success {
+  background-color: rgb(58, 211, 58);
+  box-shadow: 0 0 10px 2px rgba(51, 255, 0, 0.568);
+  text-shadow: 1px 1px #333333;
+  color: rgb(255, 255, 255);
+}
+
+.error {
+  background-color: rgba(230, 68, 68, 0.384);
+  box-shadow: 0 0 10px 2px red;
+  color: white;
+}
+
+#generateBtn {
+  display: block;
+  margin: 0 auto;
+  background-color: #00f7d2;
+  color: white;
+  width: 40%;
+  height: 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgb(65, 65, 65);
+  padding-top: 0.2rem;
+  font-weight: bold;
+}
+
+#generateBtn:hover {
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 5px 5px #00f7d288;
+  border: 1px solid rgb(51, 50, 50);
+}
+
+/* =======================TITLE STiLING========================== */
+.word {
+  transition: opacity 0.2s ease-in-out;
+  width: 100%;
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+  transform: translate(calc(var(--x, 0) * 1%), calc(var(--y, 0) * 1%)) rotate(calc(var(--r, 0) * 1deg)) scale(var(--s, 1));
+}
+
+h1 {
+  font-size: 3rem;
+  width: 100%;
+  text-transform: uppercase;
+}
+h1:hover .word {
+  opacity: 0.25;
+}
+@root {
+  @keyframes wobble {
+    0%, 100% {
+      transform: translateY(0) rotate(0);
+    }
+    25%, 75% {
+      transform: translateY(-5px) rotate(5deg);
+    }
+    50% {
+      transform: translateY(5px) rotate(-5deg);
+    }
+  }
+}
+h1:hover .word:hover {
+  opacity: 1;
+}
+h1:hover .word:hover .letter::before {
+  animation: wobble 0.3s infinite;
+}
+h1:hover .word:hover .letter:nth-child(1) {
+  --x: -24;
+  --y: 14;
+  --r: -14;
+}
+h1:hover .word:hover .letter:nth-child(1):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: 6;
+  --y: 7;
+  --r: 2;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(2) {
+  --x: -12;
+  --y: 20;
+  --r: -9;
+}
+h1:hover .word:hover .letter:nth-child(2):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: 6;
+  --y: 10;
+  --r: -8;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(3) {
+  --x: -22;
+  --y: -6;
+  --r: 4;
+}
+h1:hover .word:hover .letter:nth-child(3):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: 2;
+  --y: 4;
+  --r: -4;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(4) {
+  --x: 18;
+  --y: 20;
+  --r: -7;
+}
+h1:hover .word:hover .letter:nth-child(4):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: 3;
+  --y: 6;
+  --r: 4;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(5) {
+  --x: 2;
+  --y: 9;
+  --r: 21;
+}
+h1:hover .word:hover .letter:nth-child(5):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: -5;
+  --y: -8;
+  --r: -8;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(6) {
+  --x: 5;
+  --y: 20;
+  --r: 18;
+}
+h1:hover .word:hover .letter:nth-child(6):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: 10;
+  --y: 3;
+  --r: 3;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(7) {
+  --x: -22;
+  --y: -14;
+  --r: 14;
+}
+h1:hover .word:hover .letter:nth-child(7):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: -8;
+  --y: -8;
+  --r: -4;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(8) {
+  --x: -15;
+  --y: 17;
+  --r: -2;
+}
+h1:hover .word:hover .letter:nth-child(8):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: 3;
+  --y: -1;
+  --r: 1;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(9) {
+  --x: -1;
+  --y: 24;
+  --r: -16;
+}
+h1:hover .word:hover .letter:nth-child(9):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: 5;
+  --y: -5;
+  --r: -9;
+  --s: 1.25;
+}
+h1:hover .word:hover .letter:nth-child(10) {
+  --x: -8;
+  --y: 1;
+  --r: -14;
+}
+h1:hover .word:hover .letter:nth-child(10):hover {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgb(9, 245, 186);
+  --x: 6;
+  --y: 10;
+  --r: 2;
+  --s: 1.25;
+}
+
+/*# sourceMappingURL=app.css.map */
